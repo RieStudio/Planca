@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/widget_background">
+
+    <!-- Left Column: Summary Info (weight 0.4) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/widget_day_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ÇARŞAMBA"
+            android:textColor="#94A3B8"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:id="@+id/widget_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24 Haziran"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <TextView
+            android:id="@+id/widget_count_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Kalan Görev"
+            android:textColor="#38BDF8"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:background="#1538BDF8"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+
+    </LinearLayout>
+
+    <!-- Divider Line -->
+    <FrameLayout
+        android:id="@+id/widget_divider"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#15FFFFFF"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <!-- Right Column: List of up to 3 tasks & Add button (weight 0.6) -->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6">
+
+        <LinearLayout
+            android:id="@+id/widget_tasks_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <!-- Task Row 1 -->
+            <LinearLayout
+                android:id="@+id/widget_task_row_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="6dp">
+                <ImageView
+                    android:id="@+id/widget_check_1"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_widget_check_off" />
+                <FrameLayout
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/widget_task_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Görev 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+                <TextView
+                    android:id="@+id/widget_dot_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="•"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:includeFontPadding="false" />
+            </LinearLayout>
+
+            <!-- Task Row 2 -->
+            <LinearLayout
+                android:id="@+id/widget_task_row_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="6dp">
+                <ImageView
+                    android:id="@+id/widget_check_2"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_widget_check_off" />
+                <FrameLayout
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/widget_task_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Görev 2"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+                <TextView
+                    android:id="@+id/widget_dot_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="•"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:includeFontPadding="false" />
+            </LinearLayout>
+
+            <!-- Task Row 3 -->
+            <LinearLayout
+                android:id="@+id/widget_task_row_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/widget_check_3"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_widget_check_off" />
+                <FrameLayout
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/widget_task_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Görev 3"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+                <TextView
+                    android:id="@+id/widget_dot_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="•"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:includeFontPadding="false" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Empty indicator -->
+        <TextView
+            android:id="@+id/widget_empty_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Harika! Tüm görevler bitti. 🎉"
+            android:textColor="#94A3B8"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <!-- Floating Add Button in Corner -->
+        <ImageView
+            android:id="@+id/widget_add_button"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_widget_add"
+            android:background="#38BDF8"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

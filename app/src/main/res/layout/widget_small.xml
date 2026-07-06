@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/widget_background">
+
+    <!-- Top Row: Date and Size indicator -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/widget_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24 Haziran"
+            android:textColor="#38BDF8"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2x2"
+            android:textColor="#80FFFFFF"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            android:background="#15FFFFFF"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+
+    <!-- Big Counter Area -->
+    <LinearLayout
+        android:id="@+id/widget_counter_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+        <TextView
+            android:id="@+id/widget_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:includeFontPadding="false" />
+        <FrameLayout
+            android:layout_width="4dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/widget_counter_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aktif"
+            android:textColor="#94A3B8"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="3dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+
+    <!-- Tasks List (Max 2) -->
+    <LinearLayout
+        android:id="@+id/widget_tasks_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/widget_task_row_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            <TextView
+                android:id="@+id/widget_dot_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="•"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:includeFontPadding="false" />
+            <FrameLayout
+                android:layout_width="6dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/widget_task_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Task 1"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:singleLine="true"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/widget_task_row_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/widget_dot_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="•"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:includeFontPadding="false" />
+            <FrameLayout
+                android:layout_width="6dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/widget_task_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Task 2"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:singleLine="true"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Empty State Text -->
+    <TextView
+        android:id="@+id/widget_empty_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Planlanmış görev yok"
+        android:textColor="#94A3B8"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>
